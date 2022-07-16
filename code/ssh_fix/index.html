@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Problems With Terminal Keystrokes While Using SSH | My personal website</title>
+	<link rel="canonical" href="https://aleksandarvasilic.github.io/">
+	<link rel='alternate' type='application/rss+xml' title="My personal website RSS" href='/index.xml'>
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+	<link rel="icon" href="/favicon.ico">
+	<meta name="description" content="Sometimes some terminal emulators don&rsquo;t respond well to the established ssh connection. Backspace and some other keystrokes simply do not work at all.
+This problem does not occur on all terminal emulators, but on some such as kitty or alacritty and maybe some other terminal emulators that I do not know of, this problem is occurs often. For the record, I think that gnome-terminal and xfce4-terminal don&rsquo;t have this problem.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+<main>
+<header><h1>Problems with terminal keystrokes while using SSH</h1></header>
+<article>
+<p>Sometimes some terminal emulators don&rsquo;t respond well to the established ssh connection. Backspace and some other keystrokes simply do not work at all.</p>
+<p>This problem does not occur on all terminal emulators, but on some such as kitty or alacritty and maybe some other terminal emulators that I do not know of, this problem is occurs often. For the record, I think that gnome-terminal and xfce4-terminal don&rsquo;t have this problem.</p>
+<h2 id="a-command-that-fixes-this-issue-is">A command that fixes this issue is:</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>export TERM<span style="color:#f92672">=</span>vt100
+</span></span></code></pre></div><div id="nextprev">
+<a href="/code/caps_lock/"><div id="prevart">Previous:<br>Caps Lock as Esc and Mod key</div></a>
+<a href="/code/mouse_focus/"><div id="nextart">Next:<br>Window focus follows the cursor</div></a>
+</div>
+
+</article>
+</main>
+<footer>
+	<a href="https://aleksandarvasilic.github.io/">https://aleksandarvasilic.github.io/</a><br><br>
+	<a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+</footer>
+</body>
+</html>
+

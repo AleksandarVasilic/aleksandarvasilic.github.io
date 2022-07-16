@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Caps Lock as Esc and Mod Key | My personal website</title>
+	<link rel="canonical" href="https://aleksandarvasilic.github.io/">
+	<link rel='alternate' type='application/rss+xml' title="My personal website RSS" href='/index.xml'>
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+	<link rel="icon" href="/favicon.ico">
+	<meta name="description" content="Setting up Caps Lock as an Esc and Mod key This set of commands will change the default keyboard layout by swapping Caps Lock key with the Esc key.
+Now typically this can be done by adding one or two lines of code in your .bashrc file or the i3 config file, but what I urge you to do is that you put this in the .profile in your /home/# folder.">
+	<meta name="keywords" content="dotfiles, unix, linux">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+<main>
+<header><h1>Caps Lock as Esc and Mod key</h1></header>
+<article>
+<h1 id="setting-up-caps-lock-as-an-esc-and-mod-key">Setting up Caps Lock as an Esc and Mod key</h1>
+<p>This set of commands will change the default keyboard layout by swapping <strong>Caps Lock</strong> key with the <strong>Esc</strong> key.</p>
+<p>Now typically this can be done by adding one or two lines of code in your .bashrc file or the i3 config file, but what I urge you to do is that you put this in the .profile in your <em><strong>/home/#</strong></em> folder.</p>
+<p>Not only do these commands swap the <strong>Esc</strong> key and <strong>Caps Lock</strong> key, but also if we hold the <strong>Caps Lock</strong> key for long enough, the mentioned key starts behaving like a <strong>Mod</strong> key.</p>
+<p>This comes extremely useful if you are using tiling window managers ( such as i3wm, dwm, xmonad, etc&hellip; ) in combination with vi text editors ( vi, vim, neovim&hellip; ).</p>
+<p>For example, if we type something in vim and we want to exit the <strong>INSERT</strong> mode and go back to <strong>NORMAL</strong> mode, what we need to do is just slide our pinky finger to the left of &ldquo;A&rdquo; key and get our job done.
+The same goes for changing the current window in the TWM, we don&rsquo;t have to awkwardly hold our <strong>Mod</strong> key which is in most cases the <strong>Windows</strong> key.</p>
+<h2 id="set-of-commands-that-you-put-in-profile">Set of commands that you put in .profile</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e">#increase key speed via a rate change</span>
+</span></span><span style="display:flex;"><span>xset r rate <span style="color:#ae81ff">300</span> <span style="color:#ae81ff">50</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Map the caps lock to super...</span>
+</span></span><span style="display:flex;"><span>setxkbmap -option caps:super
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#When is pressed only once, treat it as escape</span>
+</span></span><span style="display:flex;"><span>killall xcape 2&gt;/dev/null ; xcape -e <span style="color:#e6db74">&#39;Super_L=Escape&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Map the neby button to right super as well.</span>
+</span></span><span style="display:flex;"><span>xmodmap -e <span style="color:#e6db74">&#39;keycode 135 = Super_R&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Turn off the caps lock if on since there is no longer a key for it</span>
+</span></span><span style="display:flex;"><span>xset -q | grep <span style="color:#e6db74">&#34;Caps Lock:\s*on&#34;</span> <span style="color:#f92672">&amp;&amp;</span> xdotool key Caps_Lock
+</span></span></code></pre></div><div id="nextprev">
+<a href="/code/miscellaneous/"><div id="prevart">Previous:<br>Miscellaneous</div></a>
+<a href="/code/ssh_fix/"><div id="nextart">Next:<br>Problems with terminal keystrokes while using SSH</div></a>
+</div>
+<div style="clear:both" class=taglist><a id="tag_dotfiles" href="https://aleksandarvasilic.github.io/tags/dotfiles">Dotfiles</a> &middot; <a id="tag_unix" href="https://aleksandarvasilic.github.io/tags/unix">Unix</a> &middot; <a id="tag_linux" href="https://aleksandarvasilic.github.io/tags/linux">Linux</a></div>
+</article>
+</main>
+<footer>
+	<a href="https://aleksandarvasilic.github.io/">https://aleksandarvasilic.github.io/</a><br><br>
+	<a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+</footer>
+</body>
+</html>
+

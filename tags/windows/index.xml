@@ -1,0 +1,36 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+	<title>My personal website</title>
+	<link>https://aleksandarvasilic.github.io/tags/windows/</link>
+	<description>Recent content in windows on My personal website</description>
+	<generator>Hugo -- gohugo.io</generator>
+	<language>en-us</language>
+	<lastBuildDate>Sat, 16 Jul 2022 19:15:01 +0200</lastBuildDate>
+    
+        <atom:link href="https://aleksandarvasilic.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+	
+	
+	<item>
+		<title>Window focus follows the cursor</title>
+		<link>https://aleksandarvasilic.github.io/code/mouse_focus/</link>
+		<pubDate>Sat, 16 Jul 2022 19:15:01 +0200</pubDate>
+		
+		<guid>https://aleksandarvasilic.github.io/code/mouse_focus/</guid>
+		<description>&lt;p&gt;If you are coming from GNU/Linux background, you might notice that Desktop Environment from Windows OS doesn&amp;rsquo;t have the ease of focus that comes from hovering over open programs window.&lt;/p&gt;
+&lt;p&gt;Now, this little annoyance can be corrected by running a CMD script.&lt;/p&gt;
+&lt;p&gt;The following code:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$signature = &lt;span style=&#34;color:#e6db74&#34;&gt;@&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;[DllImport(&amp;#34;user32.dll&amp;#34;)]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;public static extern bool SystemParametersInfo(int uAction, int uParam, ref 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;int lpvParam, int flags );
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;@&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$systemParamInfo = Add-Type -memberDefinition  $signature -Name SloppyFocusMouse -passThru
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;[Int32]&lt;/span&gt;$newVal = 1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$systemParamInfo::SystemParametersInfo(0x1001, 0, &lt;span style=&#34;color:#66d9ef&#34;&gt;[REF]&lt;/span&gt;$newVal, 2)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+	</item>
+	
+	</channel>
+</rss>

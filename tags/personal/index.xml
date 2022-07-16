@@ -1,0 +1,24 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+	<title>My personal website</title>
+	<link>https://aleksandarvasilic.github.io/tags/personal/</link>
+	<description>Recent content in personal on My personal website</description>
+	<generator>Hugo -- gohugo.io</generator>
+	<language>en-us</language>
+	<lastBuildDate>Sat, 16 Jul 2022 08:58:21 +0200</lastBuildDate>
+    
+        <atom:link href="https://aleksandarvasilic.github.io/tags/personal/index.xml" rel="self" type="application/rss+xml" />
+	
+	
+	<item>
+		<title>About</title>
+		<link>https://aleksandarvasilic.github.io/post/about/</link>
+		<pubDate>Sat, 16 Jul 2022 08:58:21 +0200</pubDate>
+		
+		<guid>https://aleksandarvasilic.github.io/post/about/</guid>
+		<description>&lt;p&gt;hello&lt;/p&gt;
+</description>
+	</item>
+	
+	</channel>
+</rss>

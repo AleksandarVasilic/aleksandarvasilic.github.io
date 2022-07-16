@@ -1,21 +1,32 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My personal website</title>
-    <link>https://aleksandarvasilic.github.io/</link>
-    <description>Recent content on My personal website</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 13 Jul 2022 12:37:57 +0200</lastBuildDate><atom:link href="https://aleksandarvasilic.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Mypost</title>
-      <link>https://aleksandarvasilic.github.io/post/mypost/</link>
-      <pubDate>Wed, 13 Jul 2022 12:37:57 +0200</pubDate>
-      
-      <guid>https://aleksandarvasilic.github.io/post/mypost/</guid>
-      <description>Test
-public static void main(String[] args)... </description>
-    </item>
+	<title>My personal website</title>
+	<link>https://aleksandarvasilic.github.io/</link>
+	<description>Recent content in Aleksandar Vasilić on My personal website</description>
+	<generator>Hugo -- gohugo.io</generator>
+	<language>en-us</language>
+	<lastBuildDate>Sat, 16 Jul 2022 19:15:01 +0200</lastBuildDate>
     
-  </channel>
+        <atom:link href="https://aleksandarvasilic.github.io/index.xml" rel="self" type="application/rss+xml" />
+	
+	
+	<item>
+		<title>Codes</title>
+		<link>https://aleksandarvasilic.github.io/code/</link>
+		<pubDate>Sat, 16 Jul 2022 19:15:01 +0200</pubDate>
+		
+		<guid>https://aleksandarvasilic.github.io/code/</guid>
+		<description></description>
+	</item>
+	
+	<item>
+		<title>Posts</title>
+		<link>https://aleksandarvasilic.github.io/post/</link>
+		<pubDate>Sat, 16 Jul 2022 08:58:21 +0200</pubDate>
+		
+		<guid>https://aleksandarvasilic.github.io/post/</guid>
+		<description></description>
+	</item>
+	
+	</channel>
 </rss>
