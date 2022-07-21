@@ -1,13 +1,19 @@
 body {
 	font-style: sans-serif ;
-	background: #110000 ;
+	background: #1b1d20 ;
 	color: #ccc ;
 }
 
 a 
 {
 	text-decoration: none;
-	/* color: white; */
+	color: white;
+	text-decoration: underline;
+}
+
+a:hover
+{
+	color: #bebfc1;
 }
 
 main {
@@ -48,4 +54,22 @@ footer {
 }
 #nextart,#prevart {
 	max-width: 33% ;
+}
+
+pre
+{
+		background: none !important;
+}
+
+.highlight
+{
+	background-color: #24292f;
+	padding: 5px;
+	border-radius: 15px;
+	margin-bottom: 10px;
+}
+
+code
+{
+	color:#4d801d;
 }

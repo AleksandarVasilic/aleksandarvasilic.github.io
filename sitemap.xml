@@ -1,55 +1,114 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
   <url>
     <loc>https://aleksandarvasilic.github.io/</loc>
-    <lastmod>2022-07-16T19:15:01+02:00</lastmod>
-  </url><url>
+    <lastmod>2022-07-21T14:56:59+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://aleksandarvasilic.github.io/code/</loc>
-    <lastmod>2022-07-16T19:15:01+02:00</lastmod>
-  </url><url>
+    <lastmod>2022-07-21T14:56:59+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://aleksandarvasilic.github.io/code/multiple_ssh/</loc>
+    <lastmod>2022-07-21T14:56:59+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://aleksandarvasilic.github.io/tags/ssh/</loc>
+    <lastmod>2022-07-21T14:56:59+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://aleksandarvasilic.github.io/tags/</loc>
+    <lastmod>2022-07-21T14:56:59+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://aleksandarvasilic.github.io/code/ssh/</loc>
+    <lastmod>2022-07-21T14:10:08+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://aleksandarvasilic.github.io/tags/linux/</loc>
+    <lastmod>2022-07-21T14:10:08+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://aleksandarvasilic.github.io/tags/macos/</loc>
+    <lastmod>2022-07-21T14:10:08+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://aleksandarvasilic.github.io/tags/tutorial/</loc>
+    <lastmod>2022-07-21T14:10:08+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://aleksandarvasilic.github.io/tags/unix/</loc>
+    <lastmod>2022-07-21T14:10:08+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://aleksandarvasilic.github.io/tags/dotfiles/</loc>
     <lastmod>2022-07-16T19:15:01+02:00</lastmod>
-  </url><url>
-    <loc>https://aleksandarvasilic.github.io/tags/</loc>
-    <lastmod>2022-07-16T19:15:01+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aleksandarvasilic.github.io/code/mouse_focus/</loc>
     <lastmod>2022-07-16T19:15:01+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aleksandarvasilic.github.io/tags/windows/</loc>
     <lastmod>2022-07-16T19:15:01+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aleksandarvasilic.github.io/code/ssh_fix/</loc>
     <lastmod>2022-07-16T17:37:59+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aleksandarvasilic.github.io/code/caps_lock/</loc>
     <lastmod>2022-07-16T15:43:48+02:00</lastmod>
-  </url><url>
-    <loc>https://aleksandarvasilic.github.io/tags/linux/</loc>
-    <lastmod>2022-07-16T15:43:48+02:00</lastmod>
-  </url><url>
-    <loc>https://aleksandarvasilic.github.io/tags/unix/</loc>
-    <lastmod>2022-07-16T15:43:48+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aleksandarvasilic.github.io/code/miscellaneous/</loc>
     <lastmod>2022-07-16T14:59:22+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aleksandarvasilic.github.io/post/about/</loc>
     <lastmod>2022-07-16T08:58:21+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aleksandarvasilic.github.io/tags/personal/</loc>
     <lastmod>2022-07-16T08:58:21+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aleksandarvasilic.github.io/post/</loc>
     <lastmod>2022-07-16T08:58:21+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aleksandarvasilic.github.io/tags/updates/</loc>
     <lastmod>2022-07-16T08:58:21+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aleksandarvasilic.github.io/post/mypost/</loc>
     <lastmod>2022-07-13T12:37:57+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://aleksandarvasilic.github.io/categories/</loc>
   </url>
+  
 </urlset>

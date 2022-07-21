@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Generating and Adding SSH to GitHub | My personal website</title>
+	<link rel="canonical" href="https://aleksandarvasilic.github.io/">
+	<link rel='alternate' type='application/rss+xml' title="My personal website RSS" href='/index.xml'>
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+	<link rel="icon" href="/favicon.ico">
+	<meta name="description" content="Creating ssh key The first order of business should be that we create SSH key, assuming that we have installed and configured SSH on our system.
+Running this command will create our desired key:
+ssh-keygen -t ed255519 -C example@githubemail.com #ssh-keygen &lt;-- how we are going to generate a key #-t ed25519 &lt;-- is type of encryption #-C &lt;-- here is the email asociated with that key Once a command is called the following will be printed on our terminal:">
+	<meta name="keywords" content="tutorial, unix, linux, macOs, ssh">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+<main>
+<header><h1>Generating and adding SSH to GitHub</h1></header>
+<article>
+<h2 id="creating-ssh-key">Creating ssh key</h2>
+<p>The first order of business should be that we create SSH key, assuming that we have installed and configured SSH on our system.</p>
+<p>Running this command will create our desired key:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">ssh-keygen -t ed255519 -C example@githubemail.com
+
+<span style="color:#75715e">#ssh-keygen &lt;-- how we are going to generate a key</span>
+<span style="color:#75715e">#-t ed25519 &lt;-- is type of encryption</span>
+<span style="color:#75715e">#-C &lt;-- here is the email asociated with that key</span>
+</code></pre></div><p>Once a command is called the following will be printed on our terminal:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">Generating public/private ed25519 key pair.
+
+<span style="color:#75715e"># It will ask you where do you want to save the file</span>
+Enter file in which to save the key <span style="color:#f92672">(</span>/home/user/.ssh/id_ed25519<span style="color:#f92672">)</span>: 
+
+
+<span style="color:#75715e"># This is optional. If you want a more secure connection use a passphrase, otherwise leave it blank</span>
+Enter passphrase <span style="color:#f92672">(</span>empty <span style="color:#66d9ef">for</span> no passphrase<span style="color:#f92672">)</span>:
+Enter same passphrase again: 
+
+<span style="color:#75715e"># The rest will be printed automaticaly</span> 
+Your identification has been saved in /home/user/.ssh/id_ed25519
+Your public key has been saved in /home/user/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:bGDfSMIq2TjS/C7b/ASdxd0JHfasdSxYfjKYJjfwWBdKT0Cs example@githubemail.com
+The key<span style="color:#960050;background-color:#1e0010">&#39;</span>s randomart image is:
+<span style="color:#75715e"># image will be shown</span>
+</code></pre></div><p>Now that we have a key generated, we need to make sure that our SSH agent knows about it.</p>
+<h2 id="starting-our-ssh-agent">Starting our ssh agent</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>ssh-agent -s<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</code></pre></div><h2 id="editing-config-file-inside-of-shh">Editing config file inside of .shh</h2>
+<p>Makeing sure that we don&rsquo;t or do have <strong>config</strong> file.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">ls ~/.ssh/
+</code></pre></div><p>If there isn&rsquo;t, we will crate the <strong>config</strong> file inside of the <strong>.ssh</strong> directory.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">touch ~/.ssh/config
+</code></pre></div><p>Now we need to edit that file by entering <strong>this</strong>:</p>
+<p>We have everything created and configured, the only two things left to do is to run this command and add the key to GitHub.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">ssh-add ~/.ssh/new_created_key
+</code></pre></div><h2 id="adding-our-ssh-key-to-the-githubhttpsgithubcomsettingssshnew">Adding our ssh key to the <a href="https://github.com/settings/ssh/new">GitHub</a></h2>
+<p>What we do is put the content of the generated key into GitHub.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cat ~/.ssh/nameOfKey.pub
+</code></pre></div><h2 id="trying-to-access-gtihubcom-via-ssh">Trying to access gtihub.com via ssh</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">ssh -T git@github.com
+</code></pre></div><div id="nextprev">
+<a href="/code/mouse_focus/"><div id="prevart">Previous:<br>Window focus follows the cursor</div></a>
+<a href="/code/multiple_ssh/"><div id="nextart">Next:<br>Multiple SSH connections</div></a>
+</div>
+<div style="clear:both" class=taglist><a id="tag_tutorial" href="https://aleksandarvasilic.github.io/tags/tutorial">Tutorial</a> &middot; <a id="tag_unix" href="https://aleksandarvasilic.github.io/tags/unix">Unix</a> &middot; <a id="tag_linux" href="https://aleksandarvasilic.github.io/tags/linux">Linux</a> &middot; <a id="tag_macos" href="https://aleksandarvasilic.github.io/tags/macos">MacOs</a> &middot; <a id="tag_ssh" href="https://aleksandarvasilic.github.io/tags/ssh">Ssh</a></div>
+</article>
+</main>
+<footer>
+	<a href="https://aleksandarvasilic.github.io/">https://aleksandarvasilic.github.io/</a><br><br>
+	<a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+</footer>
+</body>
+</html>
+

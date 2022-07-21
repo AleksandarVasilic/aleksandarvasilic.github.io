@@ -19,17 +19,17 @@
 		<description>&lt;p&gt;If you are coming from GNU/Linux background, you might notice that Desktop Environment from Windows OS doesn&amp;rsquo;t have the ease of focus that comes from hovering over open programs window.&lt;/p&gt;
 &lt;p&gt;Now, this little annoyance can be corrected by running a CMD script.&lt;/p&gt;
 &lt;p&gt;The following code:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$signature = &lt;span style=&#34;color:#e6db74&#34;&gt;@&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;[DllImport(&amp;#34;user32.dll&amp;#34;)]
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;public static extern bool SystemParametersInfo(int uAction, int uParam, ref 
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;int lpvParam, int flags );
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;@&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$systemParamInfo = Add-Type -memberDefinition  $signature -Name SloppyFocusMouse -passThru
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;[Int32]&lt;/span&gt;$newVal = 1
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$systemParamInfo::SystemParametersInfo(0x1001, 0, &lt;span style=&#34;color:#66d9ef&#34;&gt;[REF]&lt;/span&gt;$newVal, 2)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;$signature = &lt;span style=&#34;color:#e6db74&#34;&gt;@&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;[DllImport(&amp;#34;user32.dll&amp;#34;)]
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;public static extern bool SystemParametersInfo(int uAction, int uParam, ref 
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;int lpvParam, int flags );
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;@&lt;/span&gt;
+
+$systemParamInfo = Add-Type -memberDefinition  $signature -Name SloppyFocusMouse -passThru
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;[Int32]&lt;/span&gt;$newVal = 1
+$systemParamInfo::SystemParametersInfo(0x1001, 0, &lt;span style=&#34;color:#66d9ef&#34;&gt;[REF]&lt;/span&gt;$newVal, 2)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 	</item>
 	
 	<item>
@@ -40,23 +40,23 @@
 		<guid>https://aleksandarvasilic.github.io/code/caps_lock/</guid>
 		<description>&lt;h1 id=&#34;setting-up-caps-lock-as-an-esc-and-mod-key&#34;&gt;Setting up Caps Lock as an Esc and Mod key&lt;/h1&gt;
 &lt;p&gt;This set of commands will change the default keyboard layout by swapping &lt;strong&gt;Caps Lock&lt;/strong&gt; key with the &lt;strong&gt;Esc&lt;/strong&gt; key.&lt;/p&gt;
-&lt;p&gt;Now typically this can be done by adding one or two lines of code in your .bashrc file or the i3 config file, but what I urge you to do is that you put this in the .profile in your &lt;em&gt;&lt;strong&gt;/home/#&lt;/strong&gt;&lt;/em&gt; folder.&lt;/p&gt;
+&lt;p&gt;Now typically this can be done by adding one or two lines of code in your .bashrc file or the i3 config file, but what I encourage you to do is that you put this in the .profile in your &lt;em&gt;&lt;strong&gt;/home/#&lt;/strong&gt;&lt;/em&gt; folder.&lt;/p&gt;
 &lt;p&gt;Not only do these commands swap the &lt;strong&gt;Esc&lt;/strong&gt; key and &lt;strong&gt;Caps Lock&lt;/strong&gt; key, but also if we hold the &lt;strong&gt;Caps Lock&lt;/strong&gt; key for long enough, the mentioned key starts behaving like a &lt;strong&gt;Mod&lt;/strong&gt; key.&lt;/p&gt;
 &lt;p&gt;This comes extremely useful if you are using tiling window managers ( such as i3wm, dwm, xmonad, etc&amp;hellip; ) in combination with vi text editors ( vi, vim, neovim&amp;hellip; ).&lt;/p&gt;
 &lt;p&gt;For example, if we type something in vim and we want to exit the &lt;strong&gt;INSERT&lt;/strong&gt; mode and go back to &lt;strong&gt;NORMAL&lt;/strong&gt; mode, what we need to do is just slide our pinky finger to the left of &amp;ldquo;A&amp;rdquo; key and get our job done.
 The same goes for changing the current window in the TWM, we don&amp;rsquo;t have to awkwardly hold our &lt;strong&gt;Mod&lt;/strong&gt; key which is in most cases the &lt;strong&gt;Windows&lt;/strong&gt; key.&lt;/p&gt;
 &lt;h2 id=&#34;set-of-commands-that-you-put-in-profile&#34;&gt;Set of commands that you put in .profile&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#increase key speed via a rate change&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xset r rate &lt;span style=&#34;color:#ae81ff&#34;&gt;300&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;50&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#Map the caps lock to super...&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;setxkbmap -option caps:super
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#When is pressed only once, treat it as escape&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;killall xcape 2&amp;gt;/dev/null ; xcape -e &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Super_L=Escape&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#Map the neby button to right super as well.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xmodmap -e &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;keycode 135 = Super_R&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#Turn off the caps lock if on since there is no longer a key for it&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xset -q | grep &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Caps Lock:\s*on&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; xdotool key Caps_Lock
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#increase key speed via a rate change&lt;/span&gt;
+xset r rate &lt;span style=&#34;color:#ae81ff&#34;&gt;300&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;50&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;#Map the caps lock to super...&lt;/span&gt;
+setxkbmap -option caps:super
+&lt;span style=&#34;color:#75715e&#34;&gt;#When is pressed only once, treat it as escape&lt;/span&gt;
+killall xcape 2&amp;gt;/dev/null ; xcape -e &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Super_L=Escape&amp;#39;&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;#Map the neby button to right super as well.&lt;/span&gt;
+xmodmap -e &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;keycode 135 = Super_R&amp;#39;&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;#Turn off the caps lock if on since there is no longer a key for it&lt;/span&gt;
+xset -q | grep &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Caps Lock:\s*on&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; xdotool key Caps_Lock
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 	</item>
 	
 	</channel>
