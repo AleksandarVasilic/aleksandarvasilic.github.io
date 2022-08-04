@@ -5,10 +5,231 @@
 	<description>Recent content in tutorial on My personal website</description>
 	<generator>Hugo -- gohugo.io</generator>
 	<language>en-us</language>
-	<lastBuildDate>Thu, 21 Jul 2022 14:10:08 +0200</lastBuildDate>
+	<lastBuildDate>Fri, 29 Jul 2022 14:48:53 +0200</lastBuildDate>
     
         <atom:link href="https://aleksandarvasilic.github.io/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
 	
+	
+	<item>
+		<title>Editing</title>
+		<link>https://aleksandarvasilic.github.io/linux-tutorial/editing/</link>
+		<pubDate>Fri, 29 Jul 2022 14:48:53 +0200</pubDate>
+		
+		<guid>https://aleksandarvasilic.github.io/linux-tutorial/editing/</guid>
+		<description></description>
+	</item>
+	
+	<item>
+		<title>Mkdir</title>
+		<link>https://aleksandarvasilic.github.io/linux-tutorial/mkdir/</link>
+		<pubDate>Fri, 29 Jul 2022 14:32:07 +0200</pubDate>
+		
+		<guid>https://aleksandarvasilic.github.io/linux-tutorial/mkdir/</guid>
+		<description>&lt;p&gt;Go back to your &lt;strong&gt;home&lt;/strong&gt; folder.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;user@name:/$ cd ~
+user@name:~$ 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;creating-our-first-directory&#34;&gt;Creating our first directory&lt;/h2&gt;
+&lt;p&gt;Command for making directories is &lt;strong&gt;mkdir&lt;/strong&gt; which has to have a name of folder as parameter for it to create directory on specified path.
+&lt;em&gt;Note! Look out for capitalized letters, since it is not the same naming directory &lt;strong&gt;project&lt;/strong&gt; or &lt;strong&gt;Project&lt;/strong&gt;. I will demonstrate this bellow&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;user@name:~$ mkdir Project
+user@name:~$ cd Project
+&lt;span style=&#34;color:#75715e&#34;&gt;# !If we named our folder with capital letter we need to enter a specific name, cd project won&amp;#39;t work!&lt;/span&gt;
+user@name:/Project$ mkdir documentation
+user@name:/Project$ mkdir program
+user@name:/Project$ ls -l
+total &lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt;
+drwxrwxr-x &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; user user &lt;span style=&#34;color:#ae81ff&#34;&gt;4096&lt;/span&gt; Jul &lt;span style=&#34;color:#ae81ff&#34;&gt;29&lt;/span&gt; 14:41 documentation
+drwxrwxr-x &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; user user &lt;span style=&#34;color:#ae81ff&#34;&gt;4096&lt;/span&gt; Jul &lt;span style=&#34;color:#ae81ff&#34;&gt;29&lt;/span&gt; 14:41 program
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We can create multiple folders at once&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;user@name:/Project$ cd program
+user@name:/Project/program$ mkdir dir1 dir2 dir3
+&lt;span style=&#34;color:#75715e&#34;&gt;# we need to space out wanted directories&lt;/span&gt; 
+user@name:/Project/program$ ls -l
+total &lt;span style=&#34;color:#ae81ff&#34;&gt;12&lt;/span&gt;
+drwxrwxr-x &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; user user &lt;span style=&#34;color:#ae81ff&#34;&gt;4096&lt;/span&gt; Jul &lt;span style=&#34;color:#ae81ff&#34;&gt;29&lt;/span&gt; 14:44 dir1
+drwxrwxr-x &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; user user &lt;span style=&#34;color:#ae81ff&#34;&gt;4096&lt;/span&gt; Jul &lt;span style=&#34;color:#ae81ff&#34;&gt;29&lt;/span&gt; 14:44 dir2
+drwxrwxr-x &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; user user &lt;span style=&#34;color:#ae81ff&#34;&gt;4096&lt;/span&gt; Jul &lt;span style=&#34;color:#ae81ff&#34;&gt;29&lt;/span&gt; 14:44 dir3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;touch&#34;&gt;touch&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;touch&lt;/strong&gt; command behaves the same as the &lt;strong&gt;mkdir&lt;/strong&gt; command but instead of making directories it makes files.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;user@name:/Project/program$ touch file1 file2 file3
+user@name:/Project$ ls -ltotal &lt;span style=&#34;color:#ae81ff&#34;&gt;12&lt;/span&gt;
+drwxrwxr-x &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; user user &lt;span style=&#34;color:#ae81ff&#34;&gt;4096&lt;/span&gt; Jul &lt;span style=&#34;color:#ae81ff&#34;&gt;29&lt;/span&gt; 14:44 dir1
+drwxrwxr-x &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; user user &lt;span style=&#34;color:#ae81ff&#34;&gt;4096&lt;/span&gt; Jul &lt;span style=&#34;color:#ae81ff&#34;&gt;29&lt;/span&gt; 14:44 dir2
+drwxrwxr-x &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; user user &lt;span style=&#34;color:#ae81ff&#34;&gt;4096&lt;/span&gt; Jul &lt;span style=&#34;color:#ae81ff&#34;&gt;29&lt;/span&gt; 14:44 dir3
+-rw-rw-r-- &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; user user    &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; Jul &lt;span style=&#34;color:#ae81ff&#34;&gt;29&lt;/span&gt; 14:47 file1
+-rw-rw-r-- &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; user user    &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; Jul &lt;span style=&#34;color:#ae81ff&#34;&gt;29&lt;/span&gt; 14:47 file2
+-rw-rw-r-- &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; user user    &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; Jul &lt;span style=&#34;color:#ae81ff&#34;&gt;29&lt;/span&gt; 14:47 file3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;a href=&#34;&#34;&gt;Editing files&lt;/a&gt;.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Cd</title>
+		<link>https://aleksandarvasilic.github.io/linux-tutorial/cd/</link>
+		<pubDate>Fri, 29 Jul 2022 13:30:43 +0200</pubDate>
+		
+		<guid>https://aleksandarvasilic.github.io/linux-tutorial/cd/</guid>
+		<description>&lt;p&gt;For now we will practise our &lt;strong&gt;cd&lt;/strong&gt; command and get some usefull insites.&lt;/p&gt;
+&lt;p&gt;Make sure that you are in &lt;strong&gt;root&lt;/strong&gt; directory, if not view &lt;a href=&#34;https://aleksandarvasilic.github.io/linux-tutorial/intro/###cd&#34;&gt;this&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Next up we will see how to utilize &lt;strong&gt;relative&lt;/strong&gt; and absolut &lt;strong&gt;paths&lt;/strong&gt;. Type:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;user@name:~$ cd etc/
+user@name:/etc$ 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This was example of using relative path.&lt;/p&gt;
+&lt;p&gt;if we try to that again in our /etc/ folder we would be able to do it, because another etc folder does not exit in that direcotory.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;user@name:/etc$ pwd
+/etc
+user@name:/etc$ cd etc/
+bash: cd: etc/: No such file or directory
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To futher solidify this we will change our directory to &lt;strong&gt;/home/user&lt;/strong&gt;, and try to change our directory to &lt;strong&gt;/etc/&lt;/strong&gt; using relative path.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;user@name:/etc$ cd /home/user/ &lt;span style=&#34;color:#75715e&#34;&gt;# this is absolute path&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# Or another very usefull way to change to our home directory is by running&lt;/span&gt; 
+user@name:~$ cd ~
+&lt;span style=&#34;color:#75715e&#34;&gt;# From here we will try yo run&lt;/span&gt; 
+user@name:~$ cd etc/
+bash: cd: etc/: No such file or directory
+&lt;span style=&#34;color:#75715e&#34;&gt;# As we can see, we couldn&amp;#39;t change our directory to the etc because the etc folder does not exist in /home/user&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# Changing it back to /etc/&lt;/span&gt;
+user@name:~$ cd /etc/
+&lt;span style=&#34;color:#75715e&#34;&gt;# This will work because there is a /etc/ folder inside / (root) directory.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now we will run once again &lt;strong&gt;ls -l&lt;/strong&gt; command to see content of the current directory.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;user@name:/etc$ ls -l
+total &lt;span style=&#34;color:#ae81ff&#34;&gt;1392&lt;/span&gt;
+drwxr-xr-x  &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt; root root    &lt;span style=&#34;color:#ae81ff&#34;&gt;4096&lt;/span&gt; Jan  &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;  &lt;span style=&#34;color:#ae81ff&#34;&gt;2022&lt;/span&gt; acpi
+-rw-r--r--  &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; root root    &lt;span style=&#34;color:#ae81ff&#34;&gt;3028&lt;/span&gt; Jan  &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;  &lt;span style=&#34;color:#ae81ff&#34;&gt;2022&lt;/span&gt; adduser.conf
+-rw-r--r--  &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; root root      &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt; Jul &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt; 17:31 adjtime
+drwxr-xr-x  &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt; root root    &lt;span style=&#34;color:#ae81ff&#34;&gt;4096&lt;/span&gt; Jan  &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;  &lt;span style=&#34;color:#ae81ff&#34;&gt;2022&lt;/span&gt; alsa
+drwxr-xr-x  &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; root root   &lt;span style=&#34;color:#ae81ff&#34;&gt;12288&lt;/span&gt; Jul &lt;span style=&#34;color:#ae81ff&#34;&gt;27&lt;/span&gt; 12:52 alternatives
+-rw-r--r--  &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; root root     &lt;span style=&#34;color:#ae81ff&#34;&gt;401&lt;/span&gt; Jul &lt;span style=&#34;color:#ae81ff&#34;&gt;16&lt;/span&gt;  &lt;span style=&#34;color:#ae81ff&#34;&gt;2019&lt;/span&gt; anacrontab
+drwxr-xr-x  &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt; root root    &lt;span style=&#34;color:#ae81ff&#34;&gt;4096&lt;/span&gt; Jul &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt; 18:17 apache2
+-rw-r--r--  &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; root root     &lt;span style=&#34;color:#ae81ff&#34;&gt;433&lt;/span&gt; Oct  &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;  &lt;span style=&#34;color:#ae81ff&#34;&gt;2017&lt;/span&gt; apg.conf
+... and other thousant files will be listed, yours might be more or less files listed
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will give you a enorumous list of files that you won&amp;rsquo;t be able to see on your screen. If you want to navigate up and down to see all printed stuff you can use &lt;strong&gt;Shift + PageUp/PageDown&lt;/strong&gt; to scroll the screen.&lt;/p&gt;
+&lt;p&gt;Take a look of this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;lrwxrwxrwx  &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; root root      &lt;span style=&#34;color:#ae81ff&#34;&gt;19&lt;/span&gt; Jul &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt; 17:35 mtab -&amp;gt; ../proc/self/mounts
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Its a linked file that points to the relative path of &lt;strong&gt;../proc/self/mounts&lt;/strong&gt;. This &lt;strong&gt;../&lt;/strong&gt; is saying to go back one directory up, &lt;strong&gt;../../&lt;/strong&gt; would mean go two directoires up,  &lt;strong&gt;../../../&lt;/strong&gt; three, etc. Ex.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;user@name:/etc$ cd /usr/share/zoneinfo/Europe/
+user@name:/usr/share/zoneinfo/Europe/$ pwd
+/usr/share/zoneinfo/Europe
+&lt;span style=&#34;color:#75715e&#34;&gt;# Now run cd ../ and print directory&lt;/span&gt;
+user@name:/usr/share/zoneinfo/Europe/$ cd ../
+user@name:/usr/share/zoneinfo/$ pwd
+/usr/share/zoneinfo
+&lt;span style=&#34;color:#75715e&#34;&gt;# We can see that we have gone up one directory&lt;/span&gt;
+user@name:/usr/share/zoneinfo/$ cd ../../../
+user@name:/$ pwd
+/
+&lt;span style=&#34;color:#75715e&#34;&gt;# now we are in root folder&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;clear&#34;&gt;clear&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;clear&lt;/strong&gt; is the command that clears our terminal. Optionaly you can use &lt;strong&gt;Ctrl + l&lt;/strong&gt; to perform quick clear of the terminal, but it behaves little differently than command &lt;strong&gt;clear&lt;/strong&gt; depending on terminal emulators.&lt;/p&gt;
+&lt;p&gt;Next: making our first &lt;a href=&#34;https://aleksandarvasilic.github.io/linux-tutorial/mkdir/&#34;&gt;directory&lt;/a&gt;!&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Ls</title>
+		<link>https://aleksandarvasilic.github.io/linux-tutorial/ls/</link>
+		<pubDate>Fri, 29 Jul 2022 13:18:11 +0200</pubDate>
+		
+		<guid>https://aleksandarvasilic.github.io/linux-tutorial/ls/</guid>
+		<description>&lt;p&gt;This command is used for listing directory contents.
+If we run it we should get this result:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;user@name:/$ ls
+bin    dev   lib    libx32      mnt   root  srv  usr
+boot   etc   lib32  lost+found  opt   run   sys  var
+cdrom  home  lib64  media       proc  sbin  tmp
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Additionally we can use different parameters that we can give it to the command, such as &lt;strong&gt;ls -l&lt;/strong&gt;. If we &lt;strong&gt;man&lt;/strong&gt; this command,  -l parameter used for long listing format. Meaning it gives us more information about the content of the directory. If we run it in our root folder the following shall be listed:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;user@name:/$ ls -l
+total &lt;span style=&#34;color:#ae81ff&#34;&gt;72&lt;/span&gt;
+lrwxrwxrwx   &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; root root     &lt;span style=&#34;color:#ae81ff&#34;&gt;7&lt;/span&gt; Jul &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt; 17:27 bin -&amp;gt; usr/bin
+drwxr-xr-x   &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; root root  &lt;span style=&#34;color:#ae81ff&#34;&gt;4096&lt;/span&gt; Jul &lt;span style=&#34;color:#ae81ff&#34;&gt;27&lt;/span&gt; 12:53 boot
+drwxr-xr-x   &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; root root  &lt;span style=&#34;color:#ae81ff&#34;&gt;4096&lt;/span&gt; Jul &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt; 17:30 cdrom
+drwxr-xr-x  &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt; root root  &lt;span style=&#34;color:#ae81ff&#34;&gt;4620&lt;/span&gt; Jul &lt;span style=&#34;color:#ae81ff&#34;&gt;29&lt;/span&gt; 11:31 dev
+drwxr-xr-x &lt;span style=&#34;color:#ae81ff&#34;&gt;168&lt;/span&gt; root root &lt;span style=&#34;color:#ae81ff&#34;&gt;12288&lt;/span&gt; Jul &lt;span style=&#34;color:#ae81ff&#34;&gt;27&lt;/span&gt; 13:10 etc
+drwxr-xr-x   &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; root root  &lt;span style=&#34;color:#ae81ff&#34;&gt;4096&lt;/span&gt; Jul &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt; 17:31 home
+lrwxrwxrwx   &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; root root     &lt;span style=&#34;color:#ae81ff&#34;&gt;7&lt;/span&gt; Jul &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt; 17:27 lib -&amp;gt; usr/lib
+...etc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;explaining-the-printed-collumns&#34;&gt;Explaining the printed collumns&lt;/h2&gt;
+&lt;h3 id=&#34;first-column&#34;&gt;First column&lt;/h3&gt;
+&lt;p&gt;Tells us the priveleges and file types of the content.&lt;/p&gt;
+&lt;p&gt;Ex. &lt;strong&gt;d&lt;/strong&gt;rwxr-xr-x  first character of this sequence tells us that if the item is &lt;strong&gt;directory&lt;/strong&gt;, &lt;strong&gt;file&lt;/strong&gt; or &lt;strong&gt;link&lt;/strong&gt; (&lt;strong&gt;d&lt;/strong&gt; - directory, &lt;strong&gt;-&lt;/strong&gt; - file, &lt;strong&gt;l&lt;/strong&gt; - link). Other chartachter will be explained &lt;a href=&#34;https://aleksandarvasilic.github.io/privilages&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;second-column&#34;&gt;Second column&lt;/h3&gt;
+&lt;p&gt;Idicates how many memory locations/blocks directory/file has.&lt;/p&gt;
+&lt;h3 id=&#34;third-column&#34;&gt;Third column&lt;/h3&gt;
+&lt;p&gt;Tell us which name of the given file is owner of that file.&lt;/p&gt;
+&lt;h3 id=&#34;fourth-column&#34;&gt;Fourth column&lt;/h3&gt;
+&lt;p&gt;Tells us the group owner of the file.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;In GNU/Linux systems besides the name of the users there are name of the groups which certain user can belong to. One user can be part of the one or more groups. Ex. if our user belongs to the &lt;strong&gt;root&lt;/strong&gt; group, it could access the root files.&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;fifth-column&#34;&gt;Fifth column&lt;/h3&gt;
+&lt;p&gt;Tells us how much space in bytes given file types contain. &lt;strong&gt;Note!&lt;/strong&gt; 4096 donen&amp;rsquo;t mean that the given directory with all its content contain 4 Kilobytes, just the given directory without its content contains contain 4K, but the content inside of it are independent files and directories that could contain other files and directories&lt;/p&gt;
+&lt;h3 id=&#34;sixth-column&#34;&gt;Sixth column&lt;/h3&gt;
+&lt;p&gt;Tells us the &lt;strong&gt;date&lt;/strong&gt; of last change that has occured .&lt;/p&gt;
+&lt;h3 id=&#34;seventh-column&#34;&gt;Seventh column&lt;/h3&gt;
+&lt;p&gt;Tells us the name of the given file/directory.&lt;/p&gt;
+&lt;p&gt;Back to the &lt;a href=&#34;https://aleksandarvasilic.github.io/linux-tutorial/cd/&#34;&gt;cd&lt;/a&gt; command.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Intro</title>
+		<link>https://aleksandarvasilic.github.io/linux-tutorial/intro/</link>
+		<pubDate>Fri, 29 Jul 2022 11:51:50 +0200</pubDate>
+		
+		<guid>https://aleksandarvasilic.github.io/linux-tutorial/intro/</guid>
+		<description>&lt;h1 id=&#34;terminal&#34;&gt;Terminal&lt;/h1&gt;
+&lt;p&gt;Terminal is %%TODO!!!!!!%%&lt;/p&gt;
+&lt;p&gt;In most &lt;strong&gt;GNU/Linux&lt;/strong&gt; distributions common [shell] (TODO) is [bash])(TODO).&lt;/p&gt;
+&lt;p&gt;In our default shell we can see the &lt;strong&gt;user&lt;/strong&gt; folowed by &lt;strong&gt;name&lt;/strong&gt; of the computer has something intresting following it.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;user@name:~$ _
+&lt;span style=&#34;color:#75715e&#34;&gt;# ~ sign in the shell prompt tells us that we are currently in the users home directory.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Note!&lt;/strong&gt; some default shells might be modified and some users cannot see this printed out in their terminal&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ALWASYS USE TAB for completrion&lt;/p&gt;
+&lt;h2 id=&#34;first-command&#34;&gt;First command&lt;/h2&gt;
+&lt;p&gt;Now we will run our first command.
+simply enter &lt;strong&gt;pwd&lt;/strong&gt; in our command line and hit enter.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;user@name:~$ pwd
+/home/user
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;As we can see, &lt;strong&gt;pwd&lt;/strong&gt; prints out the name of working directory hence the name &lt;strong&gt;pwd&lt;/strong&gt; (Print Working Directory).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTE!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;All commands in GNU/Linux are &lt;strong&gt;case sensitive&lt;/strong&gt; so we need to keep an eye on what and how we are typing something. Ex. &lt;strong&gt;pwd&lt;/strong&gt; and &lt;strong&gt;PWD&lt;/strong&gt; are not the same, &lt;strong&gt;pwd&lt;/strong&gt; command will print the name of the current/working directory, while &lt;strong&gt;PWD&lt;/strong&gt; won&amp;rsquo;t execute because that command does not exist.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;must-know-commands&#34;&gt;Must know commands&lt;/h2&gt;
+&lt;h3 id=&#34;man&#34;&gt;man&lt;/h3&gt;
+&lt;p&gt;This program is maybe the most usefull program that exists on GNU/Linux systems. On some distributions this program does not come bundled with OS, but on most &lt;a href=&#34;#&#34;&gt;&lt;em&gt;just work distros&lt;/em&gt;&lt;/a&gt; it is installed by default. You can check if its installed on your system by running &lt;strong&gt;man &amp;ndash;version&lt;/strong&gt;, if it&amp;rsquo;s not installed i suggest to you that you install it by using &lt;a href=&#34;#&#34;&gt;package manager&lt;/a&gt; (more on that later).What is does it gives a manual for commands that we are not sure how to use it. Example of it:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;user@name:~$ man pwd
+
+PWD&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;1&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;                  User Commands                 PWD&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;1&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+
+NAME
+       pwd - print name of current/working directory
+
+SYNOPSIS
+       pwd &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;OPTION&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;...
+
+DESCRIPTION
+       Print the full filename of the current working direc‐
+       tory.
+
+       -L, --logical
+              use PWD from environment, even &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; it  contains
+              symlinks
+.
+.
+.
+etc...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;--help&#34;&gt;&amp;ndash;help&lt;/h3&gt;
+&lt;p&gt;Alternatevely to &lt;a href=&#34;###man&#34;&gt;man&lt;/a&gt; we can use &lt;strong&gt;&amp;ndash;help&lt;/strong&gt; command. It behaves simerarly to the &lt;strong&gt;man&lt;/strong&gt; command but it gives us much shorter answer for using certain command.&lt;/p&gt;
+&lt;h3 id=&#34;cd&#34;&gt;cd&lt;/h3&gt;
+&lt;p&gt;Next very important command is that for navigating our file system. That command is &lt;strong&gt;cd&lt;/strong&gt; which stands for change directory.  It takes an argument as the path that we want to change directory to. Paths can be absolute or relative.&lt;/p&gt;
+&lt;p&gt;Now we will change our working directory from &lt;strong&gt;/home/user/&lt;/strong&gt; directory to &lt;strong&gt;/&lt;/strong&gt; &lt;em&gt;( also known as root directory )&lt;/em&gt;. Simply type:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;user@name:~$ cd / &lt;span style=&#34;color:#75715e&#34;&gt;# Hit Enter/Return button&lt;/span&gt;
+user@name:/$      &lt;span style=&#34;color:#75715e&#34;&gt;# As wee can see our &amp;#34;~&amp;#34; symbol became &amp;#34;/&amp;#34;&lt;/span&gt;
+user@name:/$ pwd  &lt;span style=&#34;color:#75715e&#34;&gt;# Just to make sure that we are in our root directory&lt;/span&gt;
+/                 &lt;span style=&#34;color:#75715e&#34;&gt;# Returned path&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For now i will breake up commands into different pages, so this one doesn&amp;rsquo;t get too big and confusing. Next up &lt;a href=&#34;https://aleksandarvasilic.github.io/linux-tutorial/ls/&#34;&gt;&lt;strong&gt;ls&lt;/strong&gt;&lt;/a&gt; command!&lt;/p&gt;
+</description>
+	</item>
 	
 	<item>
 		<title>Generating and adding SSH to GitHub</title>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cd | My personal website</title>
+	<link rel="canonical" href="https://aleksandarvasilic.github.io/">
+	<link rel='alternate' type='application/rss+xml' title="My personal website RSS" href='/index.xml'>
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+	<link rel="icon" href="/favicon.ico">
+	<meta name="description" content="For now we will practise our cd command and get some usefull insites.
+Make sure that you are in root directory, if not view this.
+Next up we will see how to utilize relative and absolut paths. Type:
+user@name:~$ cd etc/ user@name:/etc$ This was example of using relative path.
+if we try to that again in our /etc/ folder we would be able to do it, because another etc folder does not exit in that direcotory.">
+	<meta name="keywords" content="linux, tutorial">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+<main>
+<header><h1>Cd</h1></header>
+<article>
+<p>For now we will practise our <strong>cd</strong> command and get some usefull insites.</p>
+<p>Make sure that you are in <strong>root</strong> directory, if not view <a href="/linux-tutorial/intro/###cd">this</a>.</p>
+<p>Next up we will see how to utilize <strong>relative</strong> and absolut <strong>paths</strong>. Type:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">user@name:~$ cd etc/
+user@name:/etc$ 
+</code></pre></div><p>This was example of using relative path.</p>
+<p>if we try to that again in our /etc/ folder we would be able to do it, because another etc folder does not exit in that direcotory.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">user@name:/etc$ pwd
+/etc
+user@name:/etc$ cd etc/
+bash: cd: etc/: No such file or directory
+</code></pre></div><p>To futher solidify this we will change our directory to <strong>/home/user</strong>, and try to change our directory to <strong>/etc/</strong> using relative path.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">user@name:/etc$ cd /home/user/ <span style="color:#75715e"># this is absolute path</span>
+<span style="color:#75715e"># Or another very usefull way to change to our home directory is by running</span> 
+user@name:~$ cd ~
+<span style="color:#75715e"># From here we will try yo run</span> 
+user@name:~$ cd etc/
+bash: cd: etc/: No such file or directory
+<span style="color:#75715e"># As we can see, we couldn&#39;t change our directory to the etc because the etc folder does not exist in /home/user</span>
+<span style="color:#75715e"># Changing it back to /etc/</span>
+user@name:~$ cd /etc/
+<span style="color:#75715e"># This will work because there is a /etc/ folder inside / (root) directory.</span>
+</code></pre></div><p>Now we will run once again <strong>ls -l</strong> command to see content of the current directory.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">user@name:/etc$ ls -l
+total <span style="color:#ae81ff">1392</span>
+drwxr-xr-x  <span style="color:#ae81ff">3</span> root root    <span style="color:#ae81ff">4096</span> Jan  <span style="color:#ae81ff">4</span>  <span style="color:#ae81ff">2022</span> acpi
+-rw-r--r--  <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">3028</span> Jan  <span style="color:#ae81ff">4</span>  <span style="color:#ae81ff">2022</span> adduser.conf
+-rw-r--r--  <span style="color:#ae81ff">1</span> root root      <span style="color:#ae81ff">10</span> Jul <span style="color:#ae81ff">20</span> 17:31 adjtime
+drwxr-xr-x  <span style="color:#ae81ff">3</span> root root    <span style="color:#ae81ff">4096</span> Jan  <span style="color:#ae81ff">4</span>  <span style="color:#ae81ff">2022</span> alsa
+drwxr-xr-x  <span style="color:#ae81ff">2</span> root root   <span style="color:#ae81ff">12288</span> Jul <span style="color:#ae81ff">27</span> 12:52 alternatives
+-rw-r--r--  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">401</span> Jul <span style="color:#ae81ff">16</span>  <span style="color:#ae81ff">2019</span> anacrontab
+drwxr-xr-x  <span style="color:#ae81ff">3</span> root root    <span style="color:#ae81ff">4096</span> Jul <span style="color:#ae81ff">20</span> 18:17 apache2
+-rw-r--r--  <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">433</span> Oct  <span style="color:#ae81ff">2</span>  <span style="color:#ae81ff">2017</span> apg.conf
+... and other thousant files will be listed, yours might be more or less files listed
+</code></pre></div><p>This will give you a enorumous list of files that you won&rsquo;t be able to see on your screen. If you want to navigate up and down to see all printed stuff you can use <strong>Shift + PageUp/PageDown</strong> to scroll the screen.</p>
+<p>Take a look of this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">lrwxrwxrwx  <span style="color:#ae81ff">1</span> root root      <span style="color:#ae81ff">19</span> Jul <span style="color:#ae81ff">20</span> 17:35 mtab -&gt; ../proc/self/mounts
+</code></pre></div><p>Its a linked file that points to the relative path of <strong>../proc/self/mounts</strong>. This <strong>../</strong> is saying to go back one directory up, <strong>../../</strong> would mean go two directoires up,  <strong>../../../</strong> three, etc. Ex.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">user@name:/etc$ cd /usr/share/zoneinfo/Europe/
+user@name:/usr/share/zoneinfo/Europe/$ pwd
+/usr/share/zoneinfo/Europe
+<span style="color:#75715e"># Now run cd ../ and print directory</span>
+user@name:/usr/share/zoneinfo/Europe/$ cd ../
+user@name:/usr/share/zoneinfo/$ pwd
+/usr/share/zoneinfo
+<span style="color:#75715e"># We can see that we have gone up one directory</span>
+user@name:/usr/share/zoneinfo/$ cd ../../../
+user@name:/$ pwd
+/
+<span style="color:#75715e"># now we are in root folder</span>
+</code></pre></div><h3 id="clear">clear</h3>
+<p><strong>clear</strong> is the command that clears our terminal. Optionaly you can use <strong>Ctrl + l</strong> to perform quick clear of the terminal, but it behaves little differently than command <strong>clear</strong> depending on terminal emulators.</p>
+<p>Next: making our first <a href="/linux-tutorial/mkdir/">directory</a>!</p>
+<div id="nextprev">
+<a href="/linux-tutorial/ls/"><div id="prevart">Previous:<br>Ls</div></a>
+<a href="/linux-tutorial/mkdir/"><div id="nextart">Next:<br>Mkdir</div></a>
+</div>
+<div style="clear:both" class=taglist><a id="tag_linux" href="https://aleksandarvasilic.github.io/tags/linux">Linux</a> &middot; <a id="tag_tutorial" href="https://aleksandarvasilic.github.io/tags/tutorial">Tutorial</a></div>
+</article>
+</main>
+<footer>
+	<a href="https://aleksandarvasilic.github.io/">https://aleksandarvasilic.github.io/</a><br><br>
+	<a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+</footer>
+</body>
+</html>
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Mkdir | My personal website</title>
+	<link rel="canonical" href="https://aleksandarvasilic.github.io/">
+	<link rel='alternate' type='application/rss+xml' title="My personal website RSS" href='/index.xml'>
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+	<link rel="icon" href="/favicon.ico">
+	<meta name="description" content="Go back to your home folder.
+user@name:/$ cd ~ user@name:~$ Creating our first directory Command for making directories is mkdir which has to have a name of folder as parameter for it to create directory on specified path. Note! Look out for capitalized letters, since it is not the same naming directory project or Project. I will demonstrate this bellow
+user@name:~$ mkdir Project user@name:~$ cd Project # !If we named our folder with capital letter we need to enter a specific name, cd project won&#39;t work!">
+	<meta name="keywords" content="linux, tutorial">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+<main>
+<header><h1>Mkdir</h1></header>
+<article>
+<p>Go back to your <strong>home</strong> folder.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">user@name:/$ cd ~
+user@name:~$ 
+</code></pre></div><h2 id="creating-our-first-directory">Creating our first directory</h2>
+<p>Command for making directories is <strong>mkdir</strong> which has to have a name of folder as parameter for it to create directory on specified path.
+<em>Note! Look out for capitalized letters, since it is not the same naming directory <strong>project</strong> or <strong>Project</strong>. I will demonstrate this bellow</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">user@name:~$ mkdir Project
+user@name:~$ cd Project
+<span style="color:#75715e"># !If we named our folder with capital letter we need to enter a specific name, cd project won&#39;t work!</span>
+user@name:/Project$ mkdir documentation
+user@name:/Project$ mkdir program
+user@name:/Project$ ls -l
+total <span style="color:#ae81ff">8</span>
+drwxrwxr-x <span style="color:#ae81ff">2</span> user user <span style="color:#ae81ff">4096</span> Jul <span style="color:#ae81ff">29</span> 14:41 documentation
+drwxrwxr-x <span style="color:#ae81ff">2</span> user user <span style="color:#ae81ff">4096</span> Jul <span style="color:#ae81ff">29</span> 14:41 program
+
+</code></pre></div><p>We can create multiple folders at once</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">user@name:/Project$ cd program
+user@name:/Project/program$ mkdir dir1 dir2 dir3
+<span style="color:#75715e"># we need to space out wanted directories</span> 
+user@name:/Project/program$ ls -l
+total <span style="color:#ae81ff">12</span>
+drwxrwxr-x <span style="color:#ae81ff">2</span> user user <span style="color:#ae81ff">4096</span> Jul <span style="color:#ae81ff">29</span> 14:44 dir1
+drwxrwxr-x <span style="color:#ae81ff">2</span> user user <span style="color:#ae81ff">4096</span> Jul <span style="color:#ae81ff">29</span> 14:44 dir2
+drwxrwxr-x <span style="color:#ae81ff">2</span> user user <span style="color:#ae81ff">4096</span> Jul <span style="color:#ae81ff">29</span> 14:44 dir3
+</code></pre></div><h1 id="touch">touch</h1>
+<p><strong>touch</strong> command behaves the same as the <strong>mkdir</strong> command but instead of making directories it makes files.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">user@name:/Project/program$ touch file1 file2 file3
+user@name:/Project$ ls -ltotal <span style="color:#ae81ff">12</span>
+drwxrwxr-x <span style="color:#ae81ff">2</span> user user <span style="color:#ae81ff">4096</span> Jul <span style="color:#ae81ff">29</span> 14:44 dir1
+drwxrwxr-x <span style="color:#ae81ff">2</span> user user <span style="color:#ae81ff">4096</span> Jul <span style="color:#ae81ff">29</span> 14:44 dir2
+drwxrwxr-x <span style="color:#ae81ff">2</span> user user <span style="color:#ae81ff">4096</span> Jul <span style="color:#ae81ff">29</span> 14:44 dir3
+-rw-rw-r-- <span style="color:#ae81ff">1</span> user user    <span style="color:#ae81ff">0</span> Jul <span style="color:#ae81ff">29</span> 14:47 file1
+-rw-rw-r-- <span style="color:#ae81ff">1</span> user user    <span style="color:#ae81ff">0</span> Jul <span style="color:#ae81ff">29</span> 14:47 file2
+-rw-rw-r-- <span style="color:#ae81ff">1</span> user user    <span style="color:#ae81ff">0</span> Jul <span style="color:#ae81ff">29</span> 14:47 file3
+</code></pre></div><p><a href="">Editing files</a>.</p>
+<div id="nextprev">
+<a href="/linux-tutorial/cd/"><div id="prevart">Previous:<br>Cd</div></a>
+<a href="/linux-tutorial/editing/"><div id="nextart">Next:<br>Editing</div></a>
+</div>
+<div style="clear:both" class=taglist><a id="tag_linux" href="https://aleksandarvasilic.github.io/tags/linux">Linux</a> &middot; <a id="tag_tutorial" href="https://aleksandarvasilic.github.io/tags/tutorial">Tutorial</a></div>
+</article>
+</main>
+<footer>
+	<a href="https://aleksandarvasilic.github.io/">https://aleksandarvasilic.github.io/</a><br><br>
+	<a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+</footer>
+</body>
+</html>
+

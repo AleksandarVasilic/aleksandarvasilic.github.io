@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Intro | My personal website</title>
+	<link rel="canonical" href="https://aleksandarvasilic.github.io/">
+	<link rel='alternate' type='application/rss+xml' title="My personal website RSS" href='/index.xml'>
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+	<link rel="icon" href="/favicon.ico">
+	<meta name="description" content="Terminal Terminal is %%TODO!!!!!!%%
+In most GNU/Linux distributions common [shell] (TODO) is [bash])(TODO).
+In our default shell we can see the user folowed by name of the computer has something intresting following it.
+user@name:~$ _ # ~ sign in the shell prompt tells us that we are currently in the users home directory.  Note! some default shells might be modified and some users cannot see this printed out in their terminal  ALWASYS USE TAB for completrion">
+	<meta name="keywords" content="linux, tutorial">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+<main>
+<header><h1>Intro</h1></header>
+<article>
+<h1 id="terminal">Terminal</h1>
+<p>Terminal is %%TODO!!!!!!%%</p>
+<p>In most <strong>GNU/Linux</strong> distributions common [shell] (TODO) is [bash])(TODO).</p>
+<p>In our default shell we can see the <strong>user</strong> folowed by <strong>name</strong> of the computer has something intresting following it.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">user@name:~$ _
+<span style="color:#75715e"># ~ sign in the shell prompt tells us that we are currently in the users home directory.</span>
+</code></pre></div><ul>
+<li><em><strong>Note!</strong> some default shells might be modified and some users cannot see this printed out in their terminal</em></li>
+</ul>
+<p>ALWASYS USE TAB for completrion</p>
+<h2 id="first-command">First command</h2>
+<p>Now we will run our first command.
+simply enter <strong>pwd</strong> in our command line and hit enter.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">user@name:~$ pwd
+/home/user
+</code></pre></div><p>As we can see, <strong>pwd</strong> prints out the name of working directory hence the name <strong>pwd</strong> (Print Working Directory).</p>
+<p><strong>NOTE!</strong></p>
+<p><em>All commands in GNU/Linux are <strong>case sensitive</strong> so we need to keep an eye on what and how we are typing something. Ex. <strong>pwd</strong> and <strong>PWD</strong> are not the same, <strong>pwd</strong> command will print the name of the current/working directory, while <strong>PWD</strong> won&rsquo;t execute because that command does not exist.</em></p>
+<h2 id="must-know-commands">Must know commands</h2>
+<h3 id="man">man</h3>
+<p>This program is maybe the most usefull program that exists on GNU/Linux systems. On some distributions this program does not come bundled with OS, but on most <a href="#"><em>just work distros</em></a> it is installed by default. You can check if its installed on your system by running <strong>man &ndash;version</strong>, if it&rsquo;s not installed i suggest to you that you install it by using <a href="#">package manager</a> (more on that later).What is does it gives a manual for commands that we are not sure how to use it. Example of it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">user@name:~$ man pwd
+
+PWD<span style="color:#f92672">(</span>1<span style="color:#f92672">)</span>                  User Commands                 PWD<span style="color:#f92672">(</span>1<span style="color:#f92672">)</span>
+
+NAME
+       pwd - print name of current/working directory
+
+SYNOPSIS
+       pwd <span style="color:#f92672">[</span>OPTION<span style="color:#f92672">]</span>...
+
+DESCRIPTION
+       Print the full filename of the current working direc‐
+       tory.
+
+       -L, --logical
+              use PWD from environment, even <span style="color:#66d9ef">if</span> it  contains
+              symlinks
+.
+.
+.
+etc...
+</code></pre></div><h3 id="--help">&ndash;help</h3>
+<p>Alternatevely to <a href="###man">man</a> we can use <strong>&ndash;help</strong> command. It behaves simerarly to the <strong>man</strong> command but it gives us much shorter answer for using certain command.</p>
+<h3 id="cd">cd</h3>
+<p>Next very important command is that for navigating our file system. That command is <strong>cd</strong> which stands for change directory.  It takes an argument as the path that we want to change directory to. Paths can be absolute or relative.</p>
+<p>Now we will change our working directory from <strong>/home/user/</strong> directory to <strong>/</strong> <em>( also known as root directory )</em>. Simply type:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">user@name:~$ cd / <span style="color:#75715e"># Hit Enter/Return button</span>
+user@name:/$      <span style="color:#75715e"># As wee can see our &#34;~&#34; symbol became &#34;/&#34;</span>
+user@name:/$ pwd  <span style="color:#75715e"># Just to make sure that we are in our root directory</span>
+/                 <span style="color:#75715e"># Returned path</span>
+</code></pre></div><p>For now i will breake up commands into different pages, so this one doesn&rsquo;t get too big and confusing. Next up <a href="/linux-tutorial/ls/"><strong>ls</strong></a> command!</p>
+<div id="nextprev">
+<a href="/code/qemu/"><div id="prevart">Previous:<br>Qemu</div></a>
+<a href="/linux-tutorial/ls/"><div id="nextart">Next:<br>Ls</div></a>
+</div>
+<div style="clear:both" class=taglist><a id="tag_linux" href="https://aleksandarvasilic.github.io/tags/linux">Linux</a> &middot; <a id="tag_tutorial" href="https://aleksandarvasilic.github.io/tags/tutorial">Tutorial</a></div>
+</article>
+</main>
+<footer>
+	<a href="https://aleksandarvasilic.github.io/">https://aleksandarvasilic.github.io/</a><br><br>
+	<a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+</footer>
+</body>
+</html>
+

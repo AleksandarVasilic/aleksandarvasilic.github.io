@@ -2,20 +2,38 @@
   <channel>
 	<title>My personal website</title>
 	<link>https://aleksandarvasilic.github.io/</link>
-	<description>Recent content in Aleksandar Vasilić on My personal website</description>
+	<description>Recent content on My personal website</description>
 	<generator>Hugo -- gohugo.io</generator>
 	<language>en-us</language>
-	<lastBuildDate>Thu, 21 Jul 2022 14:56:59 +0200</lastBuildDate>
+	<lastBuildDate>Fri, 29 Jul 2022 14:48:53 +0200</lastBuildDate>
     
         <atom:link href="https://aleksandarvasilic.github.io/index.xml" rel="self" type="application/rss+xml" />
 	
 	
 	<item>
+		<title>Linux Tutorials</title>
+		<link>https://aleksandarvasilic.github.io/linux-tutorial/</link>
+		<pubDate>Fri, 29 Jul 2022 14:48:53 +0200</pubDate>
+		
+		<guid>https://aleksandarvasilic.github.io/linux-tutorial/</guid>
+		<description></description>
+	</item>
+	
+	<item>
 		<title>Codes</title>
 		<link>https://aleksandarvasilic.github.io/code/</link>
-		<pubDate>Thu, 21 Jul 2022 14:56:59 +0200</pubDate>
+		<pubDate>Wed, 27 Jul 2022 12:38:49 +0200</pubDate>
 		
 		<guid>https://aleksandarvasilic.github.io/code/</guid>
+		<description></description>
+	</item>
+	
+	<item>
+		<title>Bashes</title>
+		<link>https://aleksandarvasilic.github.io/bash/</link>
+		<pubDate>Mon, 25 Jul 2022 09:34:04 +0200</pubDate>
+		
+		<guid>https://aleksandarvasilic.github.io/bash/</guid>
 		<description></description>
 	</item>
 	

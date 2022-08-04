@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> | My personal website</title>
+	<link rel="canonical" href="https://aleksandarvasilic.github.io/">
+	<link rel='alternate' type='application/rss+xml' title="My personal website RSS" href='/index.xml'>
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+	<link rel="icon" href="/favicon.ico">
+	<meta name="description" content="~ sign in the shell prompt tells us that we are currently in the users home directory.
+All commands in GNU/Linux are case sensitive so we need to keep an eye on what and how we are typing something. Ex. pwd and PWD are not the same, pwd command will print the name of the current/working directory, while PWD won&rsquo;t execute because that command does not exist.
+Must know commands  pwd - prints the name of the current/working directory ls - list directory contents cd - is command for changing directories.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+<main>
+<header><h1></h1></header>
+<article>
+<p>~ sign in the shell prompt tells us that we are currently in the users home directory.</p>
+<p>All commands in GNU/Linux are <strong>case sensitive</strong> so we need to keep an eye on what and how we are typing something. Ex. <strong>pwd</strong> and <strong>PWD</strong> are not the same, <strong>pwd</strong> command will print the name of the current/working directory, while <strong>PWD</strong> won&rsquo;t execute because that command does not exist.</p>
+<h2 id="must-know-commands">Must know commands</h2>
+<ul>
+<li>pwd - prints the name of the current/working directory</li>
+<li>ls - list directory contents</li>
+<li>cd - is command for changing directories. It takes an argument as the path that we want to change directory to. Paths can be absolute or relative. Ex. cd /etc/
+Printing all the contents of the directory. ls -l gives us more information about the content of the dir. It list the content as the list but also it give us some additional informations.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">lrwxrwxrwx   <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">7</span> Jul <span style="color:#ae81ff">20</span> 17:27 bin -&gt; usr/bin
+drwxr-xr-x   <span style="color:#ae81ff">4</span> root root  <span style="color:#ae81ff">4096</span> Jul <span style="color:#ae81ff">27</span> 12:53 boot
+drwxr-xr-x   <span style="color:#ae81ff">2</span> root root  <span style="color:#ae81ff">4096</span> Jul <span style="color:#ae81ff">20</span> 17:30 cdrom
+
+</code></pre></div><h3 id="first-column-tells-us-the-priveleges-and-file-types-of-the-content">First column tells us the priveleges and file types of the content.</h3>
+<p>Ex. drwxr-xr-x  first character of this sequence tells us that if the item is directory, file or link. <strong>d</strong> - directory, <strong>-</strong> - file, <strong>l</strong> - link</p>
+<h3 id="second-column-is-the-indicator-for-how-many-memory-locationsblocks-directoriumfile-has">Second column is the indicator for how many memory locations/blocks directorium/file has.</h3>
+<h3 id="third-column-is-reserved-for-telling-us-which-name-of-the-given-file-is-owner-of-that-file">Third column is reserved for telling us which name of the given file is owner of that file.</h3>
+<h3 id="fourth-column-tells-us-the-group-owner-of-the-file">Fourth column tells us the group owner of the file.</h3>
+<p><em>In GNU/Linux systems besides the name of the users there are name of the groups which certain user can belong to. One user can be part of the one or more groups. Ex. if our user belongs to the <strong>root</strong> group, it could access the root files.</em></p>
+<h3 id="fifth-column">Fifth column</h3>
+<p>tells us how much space in bytes given file types contain. <strong>Note!</strong> 4096 donen&rsquo;t mean that the given directory with all its content contain 4 Kilobytes, just the given directory without its content contains contain 4K, but the content inside of it are independent files and directories that could contain other files and directories</p>
+<h3 id="sixth-column">Sixth column</h3>
+<p>Tells us the <strong>date</strong> of last change that has occured .</p>
+<h3 id="seventh-column">Seventh column</h3>
+<p>Tells us the name of the given file/directory.</p>
+<p>Now we will change our directory to <strong>/etc/</strong></p>
+<div id="nextprev">
+<a href="/excel.md/"><div id="prevart">Previous:<br></div></a>
+<a href="/2022-07-29/"><div id="nextart">Next:<br></div></a>
+</div>
+
+</article>
+</main>
+<footer>
+	<a href="https://aleksandarvasilic.github.io/">https://aleksandarvasilic.github.io/</a><br><br>
+	<a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+</footer>
+</body>
+</html>
+

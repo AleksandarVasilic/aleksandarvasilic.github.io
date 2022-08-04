@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Ls | My personal website</title>
+	<link rel="canonical" href="https://aleksandarvasilic.github.io/">
+	<link rel='alternate' type='application/rss+xml' title="My personal website RSS" href='/index.xml'>
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+	<link rel="icon" href="/favicon.ico">
+	<meta name="description" content="This command is used for listing directory contents. If we run it we should get this result:
+user@name:/$ ls bin dev lib libx32 mnt root srv usr boot etc lib32 lost&#43;found opt run sys var cdrom home lib64 media proc sbin tmp Additionally we can use different parameters that we can give it to the command, such as ls -l. If we man this command, -l parameter used for long listing format.">
+	<meta name="keywords" content="linux, tutorial">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+<main>
+<header><h1>Ls</h1></header>
+<article>
+<p>This command is used for listing directory contents.
+If we run it we should get this result:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">user@name:/$ ls
+bin    dev   lib    libx32      mnt   root  srv  usr
+boot   etc   lib32  lost+found  opt   run   sys  var
+cdrom  home  lib64  media       proc  sbin  tmp
+</code></pre></div><p>Additionally we can use different parameters that we can give it to the command, such as <strong>ls -l</strong>. If we <strong>man</strong> this command,  -l parameter used for long listing format. Meaning it gives us more information about the content of the directory. If we run it in our root folder the following shall be listed:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">user@name:/$ ls -l
+total <span style="color:#ae81ff">72</span>
+lrwxrwxrwx   <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">7</span> Jul <span style="color:#ae81ff">20</span> 17:27 bin -&gt; usr/bin
+drwxr-xr-x   <span style="color:#ae81ff">4</span> root root  <span style="color:#ae81ff">4096</span> Jul <span style="color:#ae81ff">27</span> 12:53 boot
+drwxr-xr-x   <span style="color:#ae81ff">2</span> root root  <span style="color:#ae81ff">4096</span> Jul <span style="color:#ae81ff">20</span> 17:30 cdrom
+drwxr-xr-x  <span style="color:#ae81ff">20</span> root root  <span style="color:#ae81ff">4620</span> Jul <span style="color:#ae81ff">29</span> 11:31 dev
+drwxr-xr-x <span style="color:#ae81ff">168</span> root root <span style="color:#ae81ff">12288</span> Jul <span style="color:#ae81ff">27</span> 13:10 etc
+drwxr-xr-x   <span style="color:#ae81ff">4</span> root root  <span style="color:#ae81ff">4096</span> Jul <span style="color:#ae81ff">20</span> 17:31 home
+lrwxrwxrwx   <span style="color:#ae81ff">1</span> root root     <span style="color:#ae81ff">7</span> Jul <span style="color:#ae81ff">20</span> 17:27 lib -&gt; usr/lib
+...etc
+</code></pre></div><h2 id="explaining-the-printed-collumns">Explaining the printed collumns</h2>
+<h3 id="first-column">First column</h3>
+<p>Tells us the priveleges and file types of the content.</p>
+<p>Ex. <strong>d</strong>rwxr-xr-x  first character of this sequence tells us that if the item is <strong>directory</strong>, <strong>file</strong> or <strong>link</strong> (<strong>d</strong> - directory, <strong>-</strong> - file, <strong>l</strong> - link). Other chartachter will be explained <a href="/privilages">here</a>.</p>
+<h3 id="second-column">Second column</h3>
+<p>Idicates how many memory locations/blocks directory/file has.</p>
+<h3 id="third-column">Third column</h3>
+<p>Tell us which name of the given file is owner of that file.</p>
+<h3 id="fourth-column">Fourth column</h3>
+<p>Tells us the group owner of the file.</p>
+<p><em>In GNU/Linux systems besides the name of the users there are name of the groups which certain user can belong to. One user can be part of the one or more groups. Ex. if our user belongs to the <strong>root</strong> group, it could access the root files.</em></p>
+<h3 id="fifth-column">Fifth column</h3>
+<p>Tells us how much space in bytes given file types contain. <strong>Note!</strong> 4096 donen&rsquo;t mean that the given directory with all its content contain 4 Kilobytes, just the given directory without its content contains contain 4K, but the content inside of it are independent files and directories that could contain other files and directories</p>
+<h3 id="sixth-column">Sixth column</h3>
+<p>Tells us the <strong>date</strong> of last change that has occured .</p>
+<h3 id="seventh-column">Seventh column</h3>
+<p>Tells us the name of the given file/directory.</p>
+<p>Back to the <a href="/linux-tutorial/cd/">cd</a> command.</p>
+<div id="nextprev">
+<a href="/linux-tutorial/intro/"><div id="prevart">Previous:<br>Intro</div></a>
+<a href="/linux-tutorial/cd/"><div id="nextart">Next:<br>Cd</div></a>
+</div>
+<div style="clear:both" class=taglist><a id="tag_linux" href="https://aleksandarvasilic.github.io/tags/linux">Linux</a> &middot; <a id="tag_tutorial" href="https://aleksandarvasilic.github.io/tags/tutorial">Tutorial</a></div>
+</article>
+</main>
+<footer>
+	<a href="https://aleksandarvasilic.github.io/">https://aleksandarvasilic.github.io/</a><br><br>
+	<a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+</footer>
+</body>
+</html>
+

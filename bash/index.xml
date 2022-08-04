@@ -1,0 +1,61 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+	<title>My personal website</title>
+	<link>https://aleksandarvasilic.github.io/bash/</link>
+	<description>Recent content in Bashes on My personal website</description>
+	<generator>Hugo -- gohugo.io</generator>
+	<language>en-us</language>
+	<lastBuildDate>Mon, 25 Jul 2022 09:34:04 +0200</lastBuildDate>
+    
+        <atom:link href="https://aleksandarvasilic.github.io/bash/index.xml" rel="self" type="application/rss+xml" />
+	
+	
+	<item>
+		<title>Making Scripts Executable</title>
+		<link>https://aleksandarvasilic.github.io/bash/execute_script/</link>
+		<pubDate>Mon, 25 Jul 2022 09:34:04 +0200</pubDate>
+		
+		<guid>https://aleksandarvasilic.github.io/bash/execute_script/</guid>
+		<description>&lt;p&gt;What we did in the &lt;a href=&#34;https://aleksandarvasilic.github.io/bash/first_script&#34;&gt;first lesson&lt;/a&gt;, executing our script by using bash, isn&amp;rsquo;t something that is used that much.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;bash hello.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+	</item>
+	
+	<item>
+		<title>First Script</title>
+		<link>https://aleksandarvasilic.github.io/bash/first_script/</link>
+		<pubDate>Mon, 25 Jul 2022 09:03:51 +0200</pubDate>
+		
+		<guid>https://aleksandarvasilic.github.io/bash/first_script/</guid>
+		<description>&lt;h2 id=&#34;creating-our-first-script&#34;&gt;Creating our first script&lt;/h2&gt;
+&lt;p&gt;What we need to do is create file with extension of &lt;strong&gt;.sh&lt;/strong&gt;. Ex.:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;touch hello.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We can open that file by using a text editor of your choice and then adding the following to it:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Hello Word!&amp;#39;&lt;/span&gt; 
+&lt;span style=&#34;color:#75715e&#34;&gt;# echo is a command that outputs strings that are passed as arguments&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;All what is left to do is to run our newly created script:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;bash hello.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Thats it, you did it! 🥳🥳🥳&lt;/p&gt;
+&lt;p&gt;In three little steps you learned how to create and run bash scripts.&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Intro</title>
+		<link>https://aleksandarvasilic.github.io/bash/intro/</link>
+		<pubDate>Fri, 22 Jul 2022 09:34:48 +0200</pubDate>
+		
+		<guid>https://aleksandarvasilic.github.io/bash/intro/</guid>
+		<description>&lt;h1 id=&#34;insbashins-shell-scripting&#34;&gt;&lt;!-- raw HTML omitted --&gt;Bash&lt;!-- raw HTML omitted --&gt; Shell Scripting&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Bourne Again SHell&lt;/strong&gt; aka &lt;strong&gt;Bash&lt;/strong&gt; is the GNU Project created by Brian Fox as a replacement for the &lt;strong&gt;Bourne shell&lt;/strong&gt;
+Today Bash is the default shell in almost all GNU/Linux distributions as well it is the default shell in older macOS systems.&lt;/p&gt;
+&lt;p&gt;As said before some systems do not come with bash as the default shell, so if we want to know if we have bash installed on our system, we should run the following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;bash --version
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We should focus so much on the versions of the bash shell since the syntax does not change that much.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-shell&#34;&gt;What is shell&lt;/h2&gt;
+&lt;p&gt;Shell is a program that can interpret and execute commands.&lt;/p&gt;
+</description>
+	</item>
+	
+	</channel>
+</rss>

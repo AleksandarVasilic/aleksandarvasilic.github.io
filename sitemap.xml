@@ -3,13 +3,83 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://aleksandarvasilic.github.io/linux-tutorial/editing/</loc>
+    <lastmod>2022-07-29T14:48:53+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://aleksandarvasilic.github.io/tags/linux/</loc>
+    <lastmod>2022-07-29T14:48:53+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://aleksandarvasilic.github.io/linux-tutorial/</loc>
+    <lastmod>2022-07-29T14:48:53+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://aleksandarvasilic.github.io/</loc>
-    <lastmod>2022-07-21T14:56:59+02:00</lastmod>
+    <lastmod>2022-07-29T14:48:53+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://aleksandarvasilic.github.io/tags/</loc>
+    <lastmod>2022-07-29T14:48:53+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://aleksandarvasilic.github.io/tags/tutorial/</loc>
+    <lastmod>2022-07-29T14:48:53+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://aleksandarvasilic.github.io/linux-tutorial/mkdir/</loc>
+    <lastmod>2022-07-29T14:32:07+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://aleksandarvasilic.github.io/linux-tutorial/cd/</loc>
+    <lastmod>2022-07-29T13:30:43+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://aleksandarvasilic.github.io/linux-tutorial/ls/</loc>
+    <lastmod>2022-07-29T13:18:11+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://aleksandarvasilic.github.io/linux-tutorial/intro/</loc>
+    <lastmod>2022-07-29T11:51:50+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://aleksandarvasilic.github.io/code/</loc>
-    <lastmod>2022-07-21T14:56:59+02:00</lastmod>
+    <lastmod>2022-07-27T12:38:49+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://aleksandarvasilic.github.io/code/qemu/</loc>
+    <lastmod>2022-07-27T12:38:49+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://aleksandarvasilic.github.io/bash/</loc>
+    <lastmod>2022-07-25T09:34:04+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://aleksandarvasilic.github.io/bash/execute_script/</loc>
+    <lastmod>2022-07-25T09:34:04+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://aleksandarvasilic.github.io/bash/first_script/</loc>
+    <lastmod>2022-07-25T09:03:51+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://aleksandarvasilic.github.io/bash/intro/</loc>
+    <lastmod>2022-07-22T09:34:48+02:00</lastmod>
   </url>
   
   <url>
@@ -23,27 +93,12 @@
   </url>
   
   <url>
-    <loc>https://aleksandarvasilic.github.io/tags/</loc>
-    <lastmod>2022-07-21T14:56:59+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://aleksandarvasilic.github.io/code/ssh/</loc>
     <lastmod>2022-07-21T14:10:08+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://aleksandarvasilic.github.io/tags/linux/</loc>
-    <lastmod>2022-07-21T14:10:08+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://aleksandarvasilic.github.io/tags/macos/</loc>
-    <lastmod>2022-07-21T14:10:08+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://aleksandarvasilic.github.io/tags/tutorial/</loc>
     <lastmod>2022-07-21T14:10:08+02:00</lastmod>
   </url>
   

@@ -5,10 +5,27 @@
 	<description>Recent content in Codes on My personal website</description>
 	<generator>Hugo -- gohugo.io</generator>
 	<language>en-us</language>
-	<lastBuildDate>Thu, 21 Jul 2022 14:56:59 +0200</lastBuildDate>
+	<lastBuildDate>Wed, 27 Jul 2022 12:38:49 +0200</lastBuildDate>
     
         <atom:link href="https://aleksandarvasilic.github.io/code/index.xml" rel="self" type="application/rss+xml" />
 	
+	
+	<item>
+		<title>Qemu</title>
+		<link>https://aleksandarvasilic.github.io/code/qemu/</link>
+		<pubDate>Wed, 27 Jul 2022 12:38:49 +0200</pubDate>
+		
+		<guid>https://aleksandarvasilic.github.io/code/qemu/</guid>
+		<description>&lt;p&gt;Qemu is the KVM (&lt;a href=&#34;https://en.wikipedia.org/wiki/Kernel-based_Virtual_Machine&#34;&gt;Kernel-based Virtual Machine&lt;/a&gt;).&lt;/p&gt;
+&lt;h1 id=&#34;instalation&#34;&gt;Instalation&lt;/h1&gt;
+&lt;p&gt;Here is where can you find how to &amp;hellip;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.qemu.org/download/#linux&#34;&gt;a&lt;/a&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;If you are using debian based systems you can enter the following:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;sudo apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon virt-manager -y 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;%%/var/lib/libvirt/images/mini.iso%%&lt;/p&gt;
+</description>
+	</item>
 	
 	<item>
 		<title>Multiple SSH connections</title>
